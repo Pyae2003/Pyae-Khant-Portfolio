@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 47 96% 53%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 210 40% 94%;
+    --accent-foreground: 222 47% 11%;
+    --border: 214 24% 83%;
+    --input: 214 24% 83%;
+    --ring: 47 96% 45%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 215 28% 17%;
+    --card-foreground: 210 40% 98%;
+    --primary: 47 96% 53%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 215 25% 22%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 22%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 215 25% 22%;
+    --accent-foreground: 210 40% 98%;
+    --border: 215 22% 27%;
+    --input: 215 22% 27%;
+    --ring: 47 96% 53%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 15% 15%, rgba(250, 204, 21, 0.055), transparent 26rem),
+      radial-gradient(circle at 85% 35%, rgba(56, 189, 248, 0.04), transparent 30rem);
+  }
+
+  ::selection {
+    background: rgba(250, 204, 21, 0.75);
+    color: #0f172a;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply relative py-20 sm:py-24 lg:py-28;
+  }
+
+  .section-shell::before {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-6xl bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  .social-link {
+    @apply inline-flex size-10 items-center justify-center rounded-full border border-border bg-background/60 text-muted-foreground backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+  }
+
+  .social-link svg {
+    @apply size-4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
