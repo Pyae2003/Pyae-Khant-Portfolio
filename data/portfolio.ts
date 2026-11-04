@@ -10,10 +10,12 @@ import {
   KeyRound,
   Layers,
   Network,
+  Leaf,
   Server,
   ShieldCheck,
   Terminal,
   Workflow,
+  Award,
 } from "lucide-react";
 
 import { siteConfig } from "@/data/site";
@@ -75,47 +77,120 @@ export const skillGroups = [
   },
 ] as const;
 
+
+
 export const projects = [
   {
     title: "AI Interview Platform",
     description:
-      "Developed a full-stack AI Interview Platform using Next.js, TypeScript, Prisma ORM, PostgreSQL, Better Auth, and AI API integration. The system supports user authentication, interview sessions, AI-based evaluation, history tracking, and an admin dashboard for managing users, categories, and interview questions.",
-    image: "/project-ai.svg",
+      "Developed an AI-powered interview preparation platform that generates technical interview questions and evaluates user responses. Features include authentication, dynamic interview sessions, AI-generated feedback, interview history, and an admin dashboard. Implemented background evaluation jobs using BullMQ and Redis.",
+    image: "/ai-interview.png",
     icon: Braces,
-    stack: ["Next.js", "NestJS", "PostgreSQL", "Redis", "BullMQ", "Docker", "zod","better-auth"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Better Auth",
+      "Redis",
+      "BullMQ",
+      "OpenRouter",
+      "Docker",
+    ],
+    github: siteConfig.links.github,
+    demo: "https://ai-interviewer.site",
+  },
+
+  {
+    title: "AWS ECR OIDC CI/CD",
+    description:
+      "Built a secure GitHub Actions workflow using OpenID Connect (OIDC) to authenticate with AWS without storing long-lived access keys. Configured IAM role trust policies and Amazon ECR permissions to automate secure Docker image builds and deployments.",
+    image: "/aws-oidc.png",
+    icon: ShieldCheck,
+    stack: [
+      "AWS",
+      "IAM",
+      "OIDC",
+      "Amazon ECR",
+      "GitHub Actions",
+      "Docker",
+      "Linux",
+      "CI/CD",
+    ],
+    github: "https://github.com/Pyae2003/oidc-demo",
+    demo: "#contact",
+  },
+
+  {
+    title: "EcoLink – Smart & Green",
+    description:
+      "Co-developed an AI-powered environmental cleanup event platform that connects communities with environmental activities. Features include event management, participant registration, approval workflows, location mapping, air quality information, AI assistance, and automated participation certificates. Awarded 2nd Prize at UCSM AI Hackathon 2026.",
+    image: "/ecolink.png",
+    icon: Leaf,
+    stack: [
+      "AI Integration",
+      "Next.js",
+      "TypeScript",
+      "Database",
+      "Maps API",
+      "REST API",
+      "Email Automation",
+    ],
     github: siteConfig.links.github,
     demo: "#contact",
   },
+
   {
-    title: "MERN Stack Social Media Application",
+    title: "Valentine Day",
     description:
-      "Built a full-stack social media application using MongoDB, Express.js, React, and Node.js with user authentication, post management, comments, and responsive UI.",
+      "Built a full-stack social media application where users can authenticate, create posts, interact with content, and manage comments. Focused on backend API development, database integration, and responsive user interfaces.",
     image: "/project-monitoring.svg",
     icon: Network,
-    stack: ["Express" , " MongoDB" , " React", "Node.js", "Docker", "Linux" , "express-validator"],
+    stack: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "REST API",
+      "Authentication",
+    ],
     github: siteConfig.links.github,
     demo: "#contact",
   },
+
   {
-    title: "Voting System",
+    title: "University Voting System",
     description:
-      "Designed and developed a secure university voting system for academic purposes with user authentication and database management.",
+      "Designed and developed a university voting system for academic purposes, focusing on user authentication, voting workflows, and database management. Explored application security and reliable handling of voting data.",
     image: "/project-deploy.svg",
     icon: Container,
-    stack: ["Node.js", "Docker", "Vercel" , "Typescript" , "React" , "Express", "zod" ],
+    stack: [
+      "Node.js",
+      "Express.js",
+      "React",
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+    ],
     github: siteConfig.links.github,
     demo: "#contact",
   },
 ] as const;
 
+
 export const certificates = [
-  { title: "Linux Administration", provider: "Infrastructure Fundamentals", icon: Terminal },
-  { title: "Docker", provider: "Container Engineering", icon: Container },
-  { title: "Podman", provider: "Daemonless Containers", icon: Boxes },
-  { title: "MERN Stack", provider: "Full-Stack Development", icon: Layers },
-  { title: "Next.js", provider: "Modern React Applications", icon: Globe },
-  { title: "Nest.js", provider: "Modern React Applications", icon: Globe },
-  { title: "Web Security", provider: "Application Security Basics", icon: ShieldCheck },
+  {
+    title: "Linux Administration",
+    provider: "National Cyber City",
+    icon: Terminal,
+    url: "YOUR_CERTIFICATE_URL",
+  },
+  {
+    title: "Other Certificate",
+    provider: "Training Provider",
+    icon: Award,
+    url: "",
+  },
 ] as const;
 
 export const highlights = [
