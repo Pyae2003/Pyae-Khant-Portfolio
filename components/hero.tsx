@@ -386,7 +386,7 @@ export function Hero() {
             {/* Profile Image Wrap */}
             <div className="group relative mt-3 overflow-hidden rounded-xl border border-border/50 bg-muted/20">
               <ImageWithLoader
-                src="/profile1.jpg"
+                src="/myphoto.jpg"
                 alt="Pyae Khant"
                 width={720}
                 height={780}
