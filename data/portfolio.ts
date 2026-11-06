@@ -186,11 +186,26 @@ export const certificates = [
     url: "YOUR_CERTIFICATE_URL",
   },
   {
-    title: "Other Certificate",
-    provider: "Training Provider",
+    title: "MERN Stack",
+    provider: "Code-lab",
     icon: Award,
     url: "",
-  },
+  },,{
+    title: "UCSM AI Hackathon",
+    provider: "UCSM",
+    icon: Award,
+    url:""
+  },{
+    title: " Nextjs , Nestjs and Docker ",
+    provider: "Code-hub",
+    icon: Award,
+    url: ""
+  },{
+    title: "DevOps Bootcamp and cloud Engineering (current learning)",
+    provider: "Let's learn DevOps",
+    icon: Award,
+    url: ""
+  }
 ] as const;
 
 export const highlights = [

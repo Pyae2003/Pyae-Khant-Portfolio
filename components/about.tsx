@@ -1,12 +1,12 @@
 
 import {
-  ArrowUpRight,
+  // ArrowUpRight,
   CheckCircle2,
   Cloud,
   Container,
-  Database,
+  // Database,
   GitBranch,
-  Server,
+  // Server,
   ShieldCheck,
   Terminal,
 } from "lucide-react";
@@ -131,7 +131,7 @@ export function About() {
               </div>
 
               <div className="grid flex-1 gap-3 sm:grid-cols-2">
-                {focusAreas.map((area, index) => (
+                {focusAreas.map((area) => (
                   <Card
                     key={area.title}
                     className="group rounded-2xl border-border/70 bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/[0.04]"

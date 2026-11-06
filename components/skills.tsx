@@ -2,7 +2,6 @@
 import {
   ArrowUpRight,
   Cloud,
-  Container,
   Database,
   GitBranch,
   Laptop,
@@ -94,7 +93,7 @@ export function Skills() {
 
         {/* Skills Grid */}
         <StaggerGrid className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {skillGroups.map((group, index) => {
+          {skillGroups.map((group) => {
             const Icon = group.icon;
 
             return (

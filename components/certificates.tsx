@@ -1,5 +1,4 @@
-
-import { Award, ArrowUpRight, ExternalLink } from "lucide-react";
+import { Award, ArrowUpRight } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
 import { StaggerGrid, StaggerItem } from "@/components/stagger-grid";
@@ -18,17 +17,16 @@ export function Certificates() {
 
         <StaggerGrid className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {certificates.map((certificate, index) => (
-            <StaggerItem key={certificate.title}>
+            <StaggerItem key={certificate?.title}>
               <Card className="group relative flex h-full flex-col overflow-hidden rounded-2xl border-border/60 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
                 {/* Top accent */}
                 <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
 
                 <div className="flex items-start justify-between gap-4">
                   <div className="grid size-12 shrink-0 place-items-center rounded-xl border border-primary/15 bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-105">
-                    <certificate.icon
-                      className="size-5"
-                      aria-hidden="true"
-                    />
+                    {certificate?.icon && (
+                      <certificate.icon className="size-5" aria-hidden="true" />
+                    )}
                   </div>
 
                   <span className="font-mono text-xs text-muted-foreground/60">
@@ -38,11 +36,11 @@ export function Certificates() {
 
                 <div className="mt-6 flex-1">
                   <h3 className="text-base font-semibold leading-6 tracking-tight">
-                    {certificate.title}
+                    {certificate?.title}
                   </h3>
 
                   <p className="mt-2 text-sm text-muted-foreground">
-                    {certificate.provider}
+                    {certificate?.provider}
                   </p>
                 </div>
 
@@ -52,9 +50,9 @@ export function Certificates() {
                     <span>Professional Learning</span>
                   </div>
 
-                  {certificate.url ? (
+                  {certificate?.url ? (
                     <a
-                      href={certificate.url}
+                      href={certificate?.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View ${certificate.title} certificate`}

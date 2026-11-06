@@ -1,7 +1,6 @@
 import { ArrowUpRight, ExternalLink, Github, Layers3 } from "lucide-react";
 import Link from "next/link";
 
-import { ImageWithLoader } from "@/components/image-with-loader";
 import { SectionHeading } from "@/components/section-heading";
 import { StaggerGrid, StaggerItem } from "@/components/stagger-grid";
 import { Badge } from "@/components/ui/badge";
@@ -22,9 +21,7 @@ export function Projects() {
 
         {/* Project Grid */}
         <StaggerGrid className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => {
-            const ProjectIcon = project.icon;
-
+          {projects.map((project) => {
             return (
               <StaggerItem key={project.title}>
                 <Card className="group flex h-full flex-col overflow-hidden rounded-2xl border-border/70 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/[0.04]">

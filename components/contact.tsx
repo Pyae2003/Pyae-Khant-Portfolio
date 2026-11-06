@@ -8,7 +8,7 @@ import {
   MapPin,
   ArrowUpRight,
   MessageCircle,
-  Sparkles,
+  // Sparkles,
 } from "lucide-react";
 
 import { ContactForm } from "@/components/contact-form";
@@ -89,12 +89,12 @@ export function Contact() {
                   in mind?
                   <br />
                   <span className="text-primary">
-                    Let's talk.
+                    Let&aposs talk.
                   </span>
                 </h3>
 
                 <p className="mt-5 max-w-sm text-sm leading-7 text-muted-foreground">
-                  I'm interested in junior backend, cloud engineering,
+                  I&aposm interested in junior backend, cloud engineering,
                   DevOps, infrastructure, and collaborative software
                   development opportunities.
                 </p>

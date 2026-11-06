@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -32,7 +31,6 @@ export function SectionHeading({
   const pauseDuration = 700;
 
   useEffect(() => {
-    let startTimer: ReturnType<typeof setTimeout>;
     let nextTimer: ReturnType<typeof setTimeout>;
     let isCancelled = false;
 
@@ -69,14 +67,14 @@ export function SectionHeading({
       }, enterTime + holdDuration);
     };
 
-    startTimer = setTimeout(animate, 100);
+    const startTimer: ReturnType<typeof setTimeout> = setTimeout(animate, 100);
 
     return () => {
       isCancelled = true;
       clearTimeout(startTimer);
       clearTimeout(nextTimer);
     };
-  }, [title]);
+  }, [title,characters.length]);
 
   return (
     <div
