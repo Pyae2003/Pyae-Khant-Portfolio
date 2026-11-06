@@ -23,12 +23,6 @@ const focusAreas = [
     tag: "Learning & Building",
   },
   {
-    icon: Container,
-    title: "Containerization",
-    description: "Docker, Kubernetes, container orchestration, and deployment workflows.",
-    tag: "Hands-on Practice",
-  },
-  {
     icon: Terminal,
     title: "Linux & Systems",
     description: "Linux administration, Bash scripting, server management, and troubleshooting.",
@@ -37,7 +31,7 @@ const focusAreas = [
   {
     icon: GitBranch,
     title: "DevOps & CI/CD",
-    description: "GitHub Actions, automated pipelines, GitOps, and deployment automation.",
+    description: "GitHub Actions, automated pipelines,Docker, Kubernetes, container orchestration, deployment workflows, GitOps, and deployment automation.",
     tag: "Currently Exploring",
   },
 ];
